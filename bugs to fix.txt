@@ -1,0 +1,25 @@
+ERROR CHECK THIS
+
+
+VERBOSE: Server: dnvts29,  Active: 17, Disconnected: 0, Connected: 0
+Get-WmiObject : The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)
+At G:\Powershell\Modules\TSTools\TSTools.psm1:170 char:21
++             $conn = Get-WmiObject -ComputerName $Server -Class win32_terminalser ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [Get-WmiObject], COMException
+    + FullyQualifiedErrorId : GetWMICOMException,Microsoft.PowerShell.Commands.GetWmiObjectCommand
+
+VERBOSE: Server: dnvts30 status:   Unknown/Error
+Exception calling "GetSessions" with "0" argument(s): "The RPC server is unavailable"
+At C:\Windows\system32\WindowsPowerShell\v1.0\Modules\PSTerminalServices\PSTerminalServices.psm1:237 char:5
++                 $TSRemoteServer.GetSessions() | Where-Object $Filter
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : Win32Exception
+	
+	
+=======
+
+RDSFARMSUMMARY - 
+adjust the connection count so that it shows the standard one
+refer to g:\ts-servers or somewhere on g:
